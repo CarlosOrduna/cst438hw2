@@ -10,7 +10,9 @@ import java.util.Date;
 import java.util.List;
 
 import org.assertj.core.util.Lists;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.mockito.MockitoAnnotations;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
@@ -33,15 +35,17 @@ public class CityServiceTest {
 	@MockBean
 	private CountryRepository countryRepository;
 
+	// This method is executed before each test
+	@BeforeEach
+     public void setUpEach() {
+    	MockitoAnnotations.initMocks( this);
+    	
+    }
 	
-	@Test
-	public void contextLoads() {
-	}
-
-
 	@Test
 	public void testCityFound() throws Exception {
 		// TODO 
+		//Country country = new Country("TST", "Test Country");
 	}
 	
 	@Test 
