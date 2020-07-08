@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns:th="www.thymeleaf.org">
+<head>
+    <title>City</title>
+</head>
+<body>
+	<h1>City</h1>
+	<br/>
+	<table>
+		<tr>
+			<td>ID</td>
+			<td th:text="${city.id}"></td>
+		</tr>
+		<tr>
+			<td>Name</td>
+			<td th:text="${city.name}"></td>
+		</tr>
+		<tr>
+			<td>Country Code</td>
+			<td th:text="${city.countryCode}"></td>
+		</tr>
+		<tr>
+			<td>Country Name</td>
+			<td th:text="${city.countryName}"></td>
+		</tr>
+		<tr>
+			<td>District</td>
+			<td th:text="${city.district}"></td>
+		</tr>
+		<tr>
+			<td>Population</td>
+			<td th:text="${city.population}"></td>
+		</tr>
+		<tr>
+			<td>Temperature</td>
+			<td th:text="${city.temp} + ' F'"></td>
+		</tr>
+		<tr>
+			<td>Time</td>
+			<td th:text="${city.time}"></td>
+		</tr>
+	</table>
+</body>
+</html>

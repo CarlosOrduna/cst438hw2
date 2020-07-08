@@ -5,7 +5,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
-
 import cst438hw2.domain.*;
 import cst438hw2.service.CityService;
 
@@ -20,7 +19,9 @@ public class CityController {
 
 		// TODO Your code goes here
 		// TODO delete the following line
-		return "";
+		CityInfo cityInfo = cityService.getCityInfo(cityName);
+		model.addAttribute("city", cityInfo);
+		return "city_info";
 	} 
 	
 }

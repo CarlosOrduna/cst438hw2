@@ -9,6 +9,7 @@ import org.springframework.web.server.ResponseStatusException;
 
 import cst438hw2.domain.*;
 import cst438hw2.service.CityService;
+import cst438hw2.service.WeatherService;
 
 @RestController
 public class CityRestController {
@@ -16,11 +17,21 @@ public class CityRestController {
 	@Autowired
 	private CityService cityService;
 	
+	@Autowired
+	CityRepository cityRepository;
+	
+	@Autowired
+	WeatherService weatherService;
+	
+	
 	@GetMapping("/api/cities/{city}")
 	public CityInfo getWeather(@PathVariable("city") String cityName) {
 		// TODO your code goes here
 		// TODO delete the following line
-		return null;
+		CityInfo cityInfo = cityService.getCityInfo(cityName);
+		return cityInfo;
+		
+		//return null;
 	}
 	
 }
